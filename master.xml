@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="5" name="All Test Suite" parallel="tests">
+    <test verbose="2" preserve-order="true" name="chromeTest">
+        <parameter name="os" value="Windows"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.qa.testCases.TC001_AccountRegistrationTest">
+                <methods><include name="Login"/>
+                    <include name="verifyDashBoard"/>
+                </methods>
+            </class>
+        </classes>
+<!--        <classes>-->
+<!--            <class name="com.qa.testCases.TC002_LoginTest">-->
+<!--                <methods><include name="verify_login"/>-->
+<!--                    <include name="verifyDashBoard"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+    </test>
+<!--        <classes>-->
+<!--            <class name="com.qa.testCases.TC003_Login">-->
+<!--                <methods><include name="verify_login"/>-->
+<!--                    <include name="verifyDashBoard"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test verbose="2" preserve-order="true" name="firefoxTest">-->
+<!--        <parameter name="os" value="Windows"></parameter>-->
+<!--        <parameter name="browser" value="firefox"></parameter>-->
+
+<!--        <classes>-->
+<!--            <class name="com.qa.testCases.TC001_AccountRegistrationTest">-->
+<!--                <methods><include name="Login"/>-->
+<!--                    <include name="verifyDashBoard"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
